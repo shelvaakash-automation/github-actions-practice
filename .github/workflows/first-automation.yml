@@ -1,0 +1,25 @@
+
+name: First Automation
+
+on:
+  push:
+    branches: [main]
+
+  pull_request:
+    branches: [main]
+
+  workflow_dispatch:
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Display welcome message
+        run: echo "Hello! My first GitHub Actions workflow is running."
+
+      - name: Display current date
+        run: date
+
+      - name: Display repository information
+        run: echo "GitHub Actions is working successfully!"
